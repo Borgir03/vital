@@ -14,7 +14,7 @@ function Navbar() {
   }
 
   const handleUsers = () => {
-    axios.get("http://localhost:3003/users").then((response) => {
+    axios.get("https://mybackend-1a9f650c8ab8.herokuapp.com/users").then((response) => {
       setUser(response.data)
       console.log(response.data)
     }).catch((error) => {

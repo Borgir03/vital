@@ -13,7 +13,7 @@ function Card() {
     }
     const formattedBirthday = new Date(selectedUser.value.birthday).toISOString().slice(0, 10);
 
-    axios.post("http://localhost:3003/record", {
+    axios.post("https://mybackend-1a9f650c8ab8.herokuapp.com/record", {
       id: selectedUser.value.id,
       first_name: selectedUser.value.first_name,
       middle_name: selectedUser.value.middle_name,
@@ -44,7 +44,7 @@ function Card() {
       return;
     }
 
-    axios.put("http://localhost:3003/checkUpdate", {
+    axios.put("https://mybackend-1a9f650c8ab8.herokuapp.com/checkUpdate", {
       id: selectedUser.value.id,
       checked_by: admin ? admin : selectedUser.value.checked_by,
     }).catch((error) => {
